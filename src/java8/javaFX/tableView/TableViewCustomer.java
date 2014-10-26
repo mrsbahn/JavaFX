@@ -25,6 +25,11 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/***
+ * The class to create a GUI and displays the customer information
+ * @author dong
+ *
+ */
 public class TableViewCustomer extends Application {
 
 	;
@@ -144,7 +149,12 @@ public class TableViewCustomer extends Application {
 				colCountry, colCompany, colFlag);
 		return table;
 	}
-
+	
+	/***
+	 * To create a page
+	 * @param pageIndex
+	 * @return
+	 */
 	private Node createPage(int pageIndex) {
 
 		int fromIndex = pageIndex * rowsPerPage;
@@ -154,11 +164,20 @@ public class TableViewCustomer extends Application {
 
 		return new BorderPane(table);
 	}
-
+	
+	/***
+	 * To show the GUI
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
 
+	/***
+	 * The model for the class customer
+	 * @author dong
+	 *
+	 */
 	public static class Customer1 {
 		private ObservableValue<Integer> id;
 		private SimpleStringProperty first_name;
